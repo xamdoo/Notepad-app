@@ -29,7 +29,7 @@ const NotesList = ()=>{
                 id={note.id} 
                 text={note.text} 
                 date={note.date}
-                handleOnDelete={handleOnDelete}/>))};
+                handleOnDelete={handleOnDelete}/>))}
             <AddNote handleOnAdd={handleOnAdd}/>
         </div>
     )

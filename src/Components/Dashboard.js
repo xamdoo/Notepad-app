@@ -1,5 +1,5 @@
 import dashboard from './img/dashboard.png';
-import notes from './img/notes.png'
+import notespic from './img/notespic.png'
 import output from './img/Output.png'
 import settings from './img/Settings.png'
 import support from './img/Support.png'
@@ -8,12 +8,16 @@ import editor from './img/editor.png'
 import privacy from './img/privacy.png'
 import Board from './Board';
 
-function Dashboard(){
+
+function Dashboard({handleOnAdd, handleOnDelete}){
+    
     return (
         
         <div className="container">
             {/* here is the board which contains the Notelist*/}
-            <Board />
+            <Board 
+                handleOnAdd={handleOnAdd}
+                handleOnDelete={handleOnDelete}/>
             <div className="sidebar">
                 <div className='empty'>
                     <div className='circle'></div>
@@ -31,7 +35,7 @@ function Dashboard(){
                         <img src={editor} alt="editor-icons"/>Editor
                     </div>
                     <div className="message title">
-                        <img src={notes} alt="notes-icon"/>Notes
+                        <img src={notespic} alt="notes-icon"/>Notes
                     </div>
                     <div className="history title">
                         <img src={output} alt="output-icon"/>Output

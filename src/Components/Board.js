@@ -3,7 +3,7 @@ import magnify from './img/search.png'
 import profile from './img/profile.png'
 import NotesList from './Noteslist';
 
-function Board(){
+function Board({handleOnAdd, handleOnDelete, notes}){
 
     return (
         <div className="header">
@@ -20,7 +20,10 @@ function Board(){
             </div>  
             <div className='note-container'>
                 {/* here is the NOTELIST*/}
-                <NotesList />
+                <NotesList 
+                    notes={notes}
+                    handleOnDelete={handleOnDelete}
+                    handleOnAdd={handleOnAdd}/>
             </div>
         </div>
     )
